@@ -16,6 +16,11 @@ print_greeting() {
 
 count_down() {
 	local count=$1
+	if [ $count -lt 0 ]; then
+	       echo " Input Positive Integers only"
+	       return 1
+	fi
+
 	while [ $count -gt 0 ]; do
 		echo $count
 		count=$((count - 1))
