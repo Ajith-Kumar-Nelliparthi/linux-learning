@@ -5,7 +5,8 @@
 # Author: Friday
 # Date: 2026-08-04
 
-GREETING="Hello, World!"
+Name=$1
+GREETING="Hello, $1"
 MAX_COUNT=5
 
 # Functions
@@ -24,7 +25,7 @@ count_down() {
 }
 
 echo "Starting the Script.."
-print_greeting
+print_greeting $1
 
 echo "Counting down from $MAX_COUNT"
 count_down $MAX_COUNT
