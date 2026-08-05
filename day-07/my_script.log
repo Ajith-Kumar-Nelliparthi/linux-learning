@@ -8,3 +8,53 @@ Counting down from 5
 1
 Blast off!
 Script execution completed.
+=============================
+		Script Menu
+=============================
+1. Pring Greeting
+2. Generate Random Number
+3. Countdown from Random Number
+4. Exit
+==============================
+Invalid choice. Please select btw 1-4.
+=============================
+		Script Menu
+=============================
+1. Pring Greeting
+2. Generate Random Number
+3. Countdown from Random Number
+4. Exit
+==============================
+Starting Countdown...
+Counting down from: 10
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+Blast off!
+=============================
+		Script Menu
+=============================
+1. Pring Greeting
+2. Generate Random Number
+3. Countdown from Random Number
+4. Exit
+==============================
+Starting Greeting...
+Hello, 
+=============================
+		Script Menu
+=============================
+1. Pring Greeting
+2. Generate Random Number
+3. Countdown from Random Number
+4. Exit
+==============================
+Starting Greeting...
+Hello, friday
