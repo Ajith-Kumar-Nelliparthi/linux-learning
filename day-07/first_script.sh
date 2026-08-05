@@ -7,15 +7,29 @@
 
 Name=$1
 GREETING="Hello, $1"
-MAX_COUNT=5
 
 # Functions
 print_greeting() {
 	echo "$GREETING"
 }
 
+random_number() {
+	echo $(( RANDOM % 10 + 1 ))
+}
+
+LOG_FILE="./my_script.log"
+if [ ! -f "$LOG_FILE" ]; then
+	touch "$LOG_FILE" || { echo "Error cannot create log file."; exit 1; }
+	chmod 644 "$LOG_FILE"
+fi
+
 count_down() {
 	local count=$1
+	if [ $count -lt 0 ]; then
+	       echo " Input Positive Integers only"
+	       return 1
+	fi
+
 	while [ $count -gt 0 ]; do
 		echo $count
 		count=$((count - 1))
@@ -23,11 +37,12 @@ count_down() {
 	done
 	echo "Blast off!"
 }
+MAX_COUNT=$(random_number)
+{
 
-echo "Starting the Script.."
-print_greeting $1
-
-echo "Counting down from $MAX_COUNT"
-count_down $MAX_COUNT
-
-echo "Script execution completed."
+	echo "Starting the Script.."
+	print_greeting $1
+	echo "Counting down from $MAX_COUNT"
+	count_down $MAX_COUNT
+	echo "Script execution completed."
+} | tee -a "$LOG_FILE"
