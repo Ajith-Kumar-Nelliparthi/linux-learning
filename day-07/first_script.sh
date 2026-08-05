@@ -39,10 +39,38 @@ count_down() {
 }
 MAX_COUNT=$(random_number)
 {
+	echo "============================="
+	echo "		Script Menu"
+	echo "============================="
+	echo "1. Pring Greeting"
+	echo "2. Generate Random Number"
+	echo "3. Countdown from Random Number"
+	echo "4. Exit"
+	echo "=============================="
+	read -p "Enter your choice [1-4]: " choice
 
-	echo "Starting the Script.."
-	print_greeting $1
-	echo "Counting down from $MAX_COUNT"
-	count_down $MAX_COUNT
-	echo "Script execution completed."
+	case $choice in
+		1)
+			echo "Starting Greeting..."
+			print_greeting
+			;;
+		2)
+			echo "Generating Random Number.."
+			rand=$(random_number)
+			echo "Random Number is: $rand"
+			;;
+		3)
+			echo "Starting Countdown..."
+			MAX_COUNT=$(random_number)
+			echo "Counting down from: $MAX_COUNT"
+			count_down $MAX_COUNT
+			;;
+		4)
+			echo "Exiting Script. Goodbye!"
+			exit 0
+			;;
+		*)
+			echo "Invalid choice. Please select btw 1-4."
+			;;
+		esac
 } | tee -a "$LOG_FILE"
