@@ -17,6 +17,12 @@ random_number() {
 	echo $(( RANDOM % 10 + 1 ))
 }
 
+LOG_FILE="./my_script.log"
+if [ ! -f "$LOG_FILE" ]; then
+	touch "$LOG_FILE" || { echo "Error cannot create log file."; exit 1; }
+	chmod 644 "$LOG_FILE"
+fi
+
 count_down() {
 	local count=$1
 	if [ $count -lt 0 ]; then
@@ -32,10 +38,11 @@ count_down() {
 	echo "Blast off!"
 }
 MAX_COUNT=$(random_number)
-echo "Starting the Script.."
-print_greeting $1
+{
 
-echo "Counting down from $MAX_COUNT"
-count_down $MAX_COUNT
-
-echo "Script execution completed."
+	echo "Starting the Script.."
+	print_greeting $1
+	echo "Counting down from $MAX_COUNT"
+	count_down $MAX_COUNT
+	echo "Script execution completed."
+} | tee -a "$LOG_FILE"
