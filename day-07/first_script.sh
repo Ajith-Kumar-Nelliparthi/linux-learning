@@ -7,11 +7,14 @@
 
 Name=$1
 GREETING="Hello, $1"
-MAX_COUNT=5
 
 # Functions
 print_greeting() {
 	echo "$GREETING"
+}
+
+random_number() {
+	echo $(( RANDOM % 10 + 1 ))
 }
 
 count_down() {
@@ -28,7 +31,7 @@ count_down() {
 	done
 	echo "Blast off!"
 }
-
+MAX_COUNT=$(random_number)
 echo "Starting the Script.."
 print_greeting $1
 
