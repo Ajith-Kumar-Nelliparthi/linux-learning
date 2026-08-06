@@ -1,0 +1,8 @@
+total 24
+-rwxr-xr-x 1 friday friday 181 Aug  6 10:48 append_text.sh
+-rw-r--r-- 1 friday friday  20 Aug  6 10:48 exe1.txt
+-rw-r--r-- 1 friday friday  17 Aug  6 11:03 numbers.txt
+-rw-r--r-- 1 friday friday   0 Aug  6 11:15 simple.txt
+-rwxr-xr-x 1 friday friday 215 Aug  6 11:02 sort_numbers.sh
+-rw-r--r-- 1 friday friday  17 Aug  6 11:04 sort_numbers.txt
+-rwxr-xr-x 1 friday friday  94 Aug  6 11:15 stdo.sh
