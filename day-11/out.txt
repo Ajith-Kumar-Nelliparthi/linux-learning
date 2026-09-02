@@ -1,0 +1,11 @@
+
+
+
+    Minimal Page
+
+
+    Hello, World!
+    This is a minimal HTML example.
+
+
+
