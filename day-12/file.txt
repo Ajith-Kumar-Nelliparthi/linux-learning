@@ -3,3 +3,7 @@ Bicel 90
 Ben 12
 Charlie 35
 Diana 89
+hi@gmail.com
+bye@gmail.com
+Contact John at john@example.com or jane.doe@company.org
+Send to admin@test.co.uk for support
